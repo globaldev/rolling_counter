@@ -5,7 +5,7 @@ require 'rolling_counter/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rolling_counter"
-  spec.version       = RollingCounter::VERSION
+  spec.version       = RollingCounter::Version
   spec.authors       = ["Mat Sadler", "Tim Blair"]
   spec.email         = ["mat@sourcetagsandcodes.com", "tim@bla.ir"]
   spec.description   = %q{A Redis-based multi-period rolling counter}
