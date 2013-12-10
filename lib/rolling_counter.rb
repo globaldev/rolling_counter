@@ -51,6 +51,7 @@ class RollingCounter
   def mget(key, windows)
     now = Time.now.to_f
     results = @redis.multi do
+      @redis.zremrangebyscore(key, 0, now - @max_window)
       windows.each { |window| do_get(key.to_s, now, window) }
     end.each_slice(2).map(&:last)
     Hash[windows.zip(results)]
@@ -59,7 +60,6 @@ class RollingCounter
   private
 
   def do_get(key, now, window)
-    @redis.zremrangebyscore(key, 0, now - @max_window)
     @redis.zcount(key, now - window, now)
   end
 end
