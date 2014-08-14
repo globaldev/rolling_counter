@@ -1,6 +1,11 @@
 # RollingCounter
 
-TODO: Write a gem description
+[![Travis build status][badge]][travis]
+
+[badge]: http://img.shields.io/travis/globaldev/rolling_counter.svg
+[travis]: https://travis-ci.org/globaldev/rolling_counter
+
+A Redis-based rolling counter with customisable windows.
 
 ## Installation
 
