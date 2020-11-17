@@ -10,7 +10,7 @@ GEM
     docile (1.1.5)
     mock_redis (0.13.2)
     multi_json (1.10.1)
-    rake (10.3.2)
+    rake (13.0.1)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
       rspec-expectations (~> 3.0.0)
